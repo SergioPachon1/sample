@@ -1,0 +1,28 @@
+
+constitutive_promoter       = BBa_J23100;
+strong_rbs                  = BBa_B0030;
+eyfp                        = BBa_E0030;
+selection_marker            = BBa_J31003;
+linker                      = BBa_J176131;
+double_terminator           = BBa_B0015;
+backbone                    = pSB1C3;
+
+
+strand =  promoter( [constitutive_promoter] )    
+	   	        
+	    rbs( [strong_rbs] ) 
+	    
+	    cds( [selection_marker] ) 
+
+	    protein_domain( [linker] )
+	    
+	    cds( [eyfp] )
+
+	    terminator( [double_terminator] )
+	    		
+	    [backbone]
+	    ;
+	    	    
+	    
+"output.nuc" = [strand];
+	    
